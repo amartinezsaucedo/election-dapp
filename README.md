@@ -17,7 +17,7 @@ Once you've added Metamask plugin to your browser:
 3.  To import an account choose one from Ganache and click on "Show keys". Copy the private key to use it on Metamask.
 4.  Under "Main Ethereum Network" click on "Custom RCP" to add our local RCP server.
 5.  Go to Ganache, copy the RCP server address and paste it on "New RCP URL". Set a network name and save. 
-## Run locally
+## Run locally .
 ### Install
 `$ npm install`
 ## Migrate contracts
