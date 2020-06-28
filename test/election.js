@@ -12,12 +12,12 @@ contract("Election", function (accounts) {
     return electionInstance.candidates(1);
   }).then(candidate => {
     assert.equal(candidate[0], 1, "Correct id");
-    assert.equal(candidate[1], "Candidate 1", "Correct name");
+    assert.equal(candidate[1], "Alberto Fernandez", "Correct name");
     assert.equal(candidate[2], 0, "Correct vote count");
     return electionInstance.candidates(2);
   }).then(candidate => {
     assert.equal(candidate[0], 2, "Correct id");
-    assert.equal(candidate[1], "Candidate 2", "Correct name");
+    assert.equal(candidate[1], "Mauricio Macri", "Correct name");
     assert.equal(candidate[2], 0, "Correct vote count");
   }));
   it("allows to cast a vote", () => Election.deployed().then(instance => {

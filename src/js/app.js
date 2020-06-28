@@ -52,7 +52,7 @@ App = {
     web3.eth.getCoinbase((err, account) => {
       if (!err) {
         App.account = account;
-        $("#accountAddress").html("Your Account: " + account);
+        $("#accountAddress").html("Tu Cuenta: " + account);
       }
     });
     App.contracts.Election.deployed().then(instance => {

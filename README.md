@@ -20,9 +20,11 @@ Once you've added Metamask plugin to your browser:
 ## Run locally .
 ### Install
 `$ npm install`
+`$ npm install truffle`
 ## Migrate contracts
 `$ truffle migrate --reset`
 ### Run
 `$ npm run dev`
 ## Run tests
-`$ truffle test` 
+`$ truffle test`
+ 

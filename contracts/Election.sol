@@ -15,8 +15,8 @@ contract Election {
     uint public candidatesCount;
 
     constructor()public{
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+        addCandidate("Alberto Fernandez");
+        addCandidate("Mauricio Macri");
     }
 
     function addCandidate(string memory name) private {
