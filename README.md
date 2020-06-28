@@ -1,30 +1,36 @@
-# Election Dapp
-
-## Development dependencies
+# Elecciones Dapp
+Elecciones Dapp es una ejemplo de como podemos realizar un sistema de votación utilizando Blockchain y Smart contracts.
+## Dependencias
 * [NPM](https://nodejs.org/en/)
 * [Truffle](https://www.trufflesuite.com/)
 * [Ganache](https://www.trufflesuite.com/ganache)
 * Metamask
   - [Chrome](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
   - [Firefox](https://addons.mozilla.org/es/firefox/addon/ether-metamask/)
-## Configuration
+## Configuración
 #### Ganache
-After installing, create a new workspace by clicking on "Quickstart Ethereum".
+Luego de instalar Ganache, crear un nuevo WorkSpace haciendo click en "Quickstart Ethereum".
 #### Metamask
-Once you've added Metamask plugin to your browser: 
-1.  Create a new wallet and set a password.
-2.  Click on your account picture and select the "Import account" option.
-3.  To import an account choose one from Ganache and click on "Show keys". Copy the private key to use it on Metamask.
-4.  Under "Main Ethereum Network" click on "Custom RCP" to add our local RCP server.
-5.  Go to Ganache, copy the RCP server address and paste it on "New RCP URL". Set a network name and save. 
-## Run locally .
-### Install
-`$ npm install`
-`$ npm install truffle`
-## Migrate contracts
+Agregar el plugin en Chrome/Firefox, buscar el mismo en la tienda de cada navegador.
+Una vez agregado, realizar lo siguiente:
+
+1.  Crear una nueva billetera y agregar una contraseña.
+2.  Click en la imagen de tu cuenta y seleccionar la opcion"Importar Cuenta".
+3.  Para importar una cuenta, selecciona una en Ganacha haciendo click en "Mostrar Clave", copiar la clave privada y pegarla en Metatask. 
+4.  Bajo en menu de "Main Ethereum Network" hacer click  "RCP Personalizadp" para agregar nuestro servidor local RCP.
+5.  En Ganache, copiar el la dirección del servidor RCP y pegarlo en "Nuevo URL RCP". Agregar un nombre a la red y guardar los cambios. 
+## Ejecutar localmente Elecciones Dapp.
+### Instalar las dependencias
+`$ npm install` instalara todas las dependencias de nuestro proyecto.
+
+`$ npm install truffle` agrega la dependencia de Truffle.
+## Migrar Contratos
+Cada vez que iniciamos nuestro servidor Ganache, tendremos que ejecutar la migración de los contratos.
+
 `$ truffle migrate --reset`
-### Run
-`$ npm run dev`
-## Run tests
+### Ejecutar
+Ejecutar el comando `$ npm run dev`. 
+Se abrirá automaticamente una pestaña en nuestro navegador.
+## Ejecutar Pruebas
 `$ truffle test`
  
