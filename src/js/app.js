@@ -59,12 +59,16 @@ App = {
       electionInstance = instance;
       return electionInstance.candidatesCount();
     }).then(candidatesCount => {
-      let candidatesResults = $("#candidatesResults");
-      candidatesResults.empty();
-      let candidatesSelect = $('#candidatesSelect');
-      candidatesSelect.empty();
+      const promises = [];
       for (let i = 1; i <= candidatesCount; i++) {
-        electionInstance.candidates(i).then(candidate => {
+        promises.push(electionInstance.candidates(i));
+      }
+      Promise.all(promises).then(candidates => {
+        let candidatesResults = $("#candidatesResults");
+        candidatesResults.empty();
+        let candidatesSelect = $('#candidatesSelect');
+        candidatesSelect.empty();
+        candidates.forEach(candidate => {
           let id = candidate[0];
           let name = candidate[1];
           let voteCount = candidate[2];
@@ -73,7 +77,7 @@ App = {
           let candidateOption = "<option value='" + id + "' >" + name + "</ option>";
           candidatesSelect.append(candidateOption);
         });
-      }
+      });
       return electionInstance.voters(App.account);
     }).then(voted => {
       if (voted) {
