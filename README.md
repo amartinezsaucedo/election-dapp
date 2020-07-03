@@ -1,5 +1,8 @@
 # Elecciones Dapp
 Elecciones Dapp es una ejemplo de como podemos realizar un sistema de votación utilizando Blockchain y Smart contracts.
+
+Puedes encontrar el video con una explicación mas detallada en: https://drive.google.com/file/d/124rbVyn9CpepsZJpRrN7AWkWtBaaa2M_/view?usp=sharing
+
 ## Dependencias
 * [NPM](https://nodejs.org/en/)
 * [Truffle](https://www.trufflesuite.com/)
